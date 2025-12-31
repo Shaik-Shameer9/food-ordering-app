@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👨‍🍳 Food Catering Service</title>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="index.css">
+   
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images\ChatGPT Image Dec 9, 2025, 09_33_39 AM.png" width="75" class="me-2">
+            <strong>Cattering Services</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#home"><b>Home</b></a></li>
+
+</li>
+
+<li class="nav-item"><a class="nav-link" href="#veg"><b>Veg</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#nonveg"><b>Non-Veg</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#sweets"><b>Sweets</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#About"><b>About</b></a></li>
+<li class="nav-item"><a class="nav-link" href="#Contact"><b>📞 Contact</b></a></li>
+<li class="nav-item">
+  <a class="nav-link" href="#" id="loginLink">
+    <b id="sam">🛃 Login</b>
+  </a>
+</li>
+
+
+
+            </ul>
+
+           <div class="d-flex align-items-center">
+    <input class="form-control search-box" type="text" placeholder="Search Items...">
+    <a href="#" class="cart-box" id="cartIcon">
+    🛒
+    <span id="cartCount">0</span>
+</a>
+
+
+    <button id="themeToggle" class="btn btn-outline-dark ms-3">
+        🌙
+    </button>
+</div>
+
+
+        </div>
+
+    </div>
+</nav>
+
+<div id="home"></div>
+
+<div id="cateringCarousel" class="carousel slide" data-bs-ride="carousel">
+
+   
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#cateringCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#cateringCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#cateringCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        
+        <div class="carousel-item active">
+            <img src="images\img1.webp" class="d-block w-50 h-100" alt="Item 1">
+            
+
+            <div class="carousel-caption">
+                <h2 class="fw-bold text-dark">Pure Veg Meals with Andhra Style</h2>
+                <p id="taste"><i>Get the tasty food items by catering straight to your home or vacation.</i></p>
+                <button class="btn btn-warning order-btn">Order Now</button>
+
+           
+            </div>
+        </div>
+
+        
+        <div class="carousel-item">
+            <img src="images\img2.jpg" class="d-block w-50 h-100" alt="Item 2">
+
+            <div class="carousel-caption">
+                <h2 class="fw-bold text-warning">Spicy & juicy Non-Veg meals</h2>
+                <p id="taste"><i>Enjoy fresh and flavorful non-veg meals.</i></p>
+                <button class="btn btn-warning order-btn">Order Now</button>
+
+            </div>
+        </div>
+
+        
+        <div class="carousel-item">
+            <img src="images\img3.webp" class="d-block w-50 h-100" alt="Item 3">
+
+            <div class="carousel-caption">
+                <h2 class="fw-bold text-dark">100% made with pure Ghee</h2>
+                <p id="taste"><i>Fresh Ghee used for prepare sweets.</i></p>
+                <button class="btn btn-warning order-btn">Order Now</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <button class="carousel-control-prev" type="button"
+        data-bs-target="#cateringCarousel"
+        data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button"
+        data-bs-target="#cateringCarousel"
+        data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</button>
+
+
+</div>
+
+
+<h2 class="text-center mb-4"id="quite">Our Food items</h2>
+
+<h2 id="vegitems" class="text-center mb-4">Veg Items</h2>
+
+<div class="container mt-4">
+<div id="veg"></div>
+
+  <!-- ROW 1 -->
+  <div class="row">
+
+  <div class="col-md-3 mb-4">
+    <div class="card food-card" data-name="Pulihora" data-price="100">
+      <img src="images\pulihora.jpg" class="card-img-top">
+      <div class="card-body text-center">
+        <h5 class="card-title">Pulihora</h5>
+        <p class="card-text">Price: ₹100 / 1 person</p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-outline-danger btn-sm minus">−</button>
+          <span class="qty">0</span>
+          <button class="btn btn-outline-success btn-sm plus">+</button>
+        </div>
+        <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+        <button class="btn btn-success add-to-cart mt-2">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Gutti Vankaya Curry" data-price="120">
+    <img src="images\vankaya.webp" class="card-img-top" alt="Gutti Vankaya Curry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Gutti Vankaya Curry</h5>
+      <p class="card-text">Price: 120 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Tomato Pappu" data-price="110">
+    <img src="images\pappu.webp"
+         class="card-img-top"
+         alt="Tomato Pappu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Tomato Pappu</h5>
+      <p class="card-text">Price: 110 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Bendakaya Pulusu" data-price="130">
+    <img src="images\bendakaya.webp" class="card-img-top" alt="Bendakaya Pulusu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Bendakaya Pulusu</h5>
+      <p class="card-text">Price: 130 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+</div>
+  
+  
+
+  <!-- ROW 2 -->
+  <div class="row">
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Mixed Veg Curry" data-price="120">
+    <img src="images\Mix-Veg.jpg" class="card-img-top" alt="Mixed Veg Curry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Mixed Veg Curry</h5>
+      <p class="card-text">Price: 120 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Gongura Pachadi" data-price="90">
+    <img src="images\gongura-chutney.jpg" class="card-img-top" alt="Gongura Pachadi">
+    <div class="card-body text-center">
+      <h5 class="card-title">Gongura Pachadi</h5>
+      <p class="card-text">Price: 90 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Sambar" data-price="80">
+    <img src="images\sambar.jpg" class="card-img-top" alt="Sambar">
+    <div class="card-body text-center">
+      <h5 class="card-title‍F5ה5">Sambar</h5>
+      <p class="card-text">Price: 80 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Sambar" data-price="80">
+    <img src="images\sambar.jpg" class="card-img-top" alt="Sambar">
+    <div class="card-body text-center">
+      <h5 class="card-title‍F5ה5">Sambar</h5>
+      <p class="card-text">Price: 80 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+</div>
+
+ 
+  <div id="nonveg"></div>
+  <h2 id="vegitems" class="text-center mb-4">Non-Veg Items</h2>
+
+  <!-- ROW 3 -->
+  <div class="row">
+
+  <div class="col-md-3 mb-4">
+    <div class="card food-card" data-name="Chicken Curry" data-price="200">
+      <img src="images\chicken-curry-recipe.jpg" class="card-img-top" alt="Chicken Curry">
+      <div class="card-body text-center">
+        <h5 class="card-title">Chicken Curry</h5>
+        <p class="card-text">Price: 200 Rs / 1 person</p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-outline-danger btn-sm minus">−</button>
+          <span class="qty">0</span>
+          <button class="btn btn-outline-success btn-sm plus">+</button>
+        </div>
+        <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+        <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <div class="card food-card" data-name="Mutton Curry" data-price="250">
+      <img src="images\muttton curry.jpg" class="card-img-top" alt="Mutton Curry">
+      <div class="card-body text-center">
+        <h5 class="card-title">Mutton Curry</h5>
+        <p class="card-text">Price: 250 Rs / 1 person</p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-outline-danger btn-sm minus">−</button>
+          <span class="qty">0</span>
+          <button class="btn btn-outline-success btn-sm plus">+</button>
+        </div>
+        <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+        <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <div class="card food-card" data-name="Fish Fry" data-price="180">
+      <img src="images\fish fry.jpg" class="card-img-top" alt="Fish Fry">
+      <div class="card-body text-center">
+        <h5 class="card-title">Fish Fry</h5>
+        <p class="card-text">Price: 180 Rs / 1 person</p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-outline-danger btn-sm minus">−</button>
+          <span class="qty">0</span>
+          <button class="btn btn-outline-success btn-sm plus">+</button>
+        </div>
+        <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+        <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <div class="card food-card" data-name="Biryani" data-price="220">
+      <img src="images\biryani.jpg" class="card-img-top" alt="Biryani">
+      <div class="card-body text-center">
+        <h5 class="card-title">Biryani</h5>
+        <p class="card-text">Price: 220 Rs / 1 person</p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-outline-danger btn-sm minus">−</button>
+          <span class="qty">0</span>
+          <button class="btn btn-outline-success btn-sm plus">+</button>
+        </div>
+        <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+        <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <!-- ROW 4 -->
+  <div class="row">
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Chicken Fry" data-price="180">
+    <img src="images\chicken fry.jpg" class="card-img-top" alt="Chicken Fry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Chicken Fry</h5>
+      <p class="card-text">Price: 180 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Mutton Fry" data-price="260">
+    <img src="images\mjutton fry.jpg" class="card-img-top" alt="Mutton Fry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Mutton Fry</h5>
+      <p class="card-text">Price: 260 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Fish Curry" data-price="190">
+    <img src="images\fish curry.jpg" class="card-img-top" alt="Fish Curry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Fish Curry</h5>
+      <p class="card-text">Price: 190 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Egg Curry" data-price="90">
+    <img src="images\egg curry.webp" class="card-img-top" alt="Egg Curry">
+    <div class="card-body text-center">
+      <h5 class="card-title">Egg Curry</h5>
+      <p class="card-text">Price: 90 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+   <div id="sweets"></div>
+  <!-- ROW 5 -->
+  <div class="row">
+    <h2 id="vegitems" class="text-center mb-4">Sweets</h2>
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Boorelu" data-price="150">
+    <img src="images\boorelu.jpg" class="card-img-top" alt="Boorelu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Boorelu</h5>
+      <p class="card-text">Price: 150 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Pootharekulu" data-price="160">
+    <img src="images\pootharekulu.webp" class="card-img-top" alt="Pootharekulu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Pootharekulu</h5>
+      <p class="card-text">Price: 160 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Laddu" data-price="140">
+    <img src="images\laddu.webp" class="card-img-top" alt="Laddu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Laddu</h5>
+      <p class="card-text">Price: 140 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Jalebi" data-price="130">
+    <img src="images\jalebi.jpg" class="card-img-top" alt="Jalebi">
+    <div class="card-body text-center">
+      <h5 class="card-title">Jalebi</h5>
+      <p class="card-text">Price: 130 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+   <div id="sweets"></div>
+  <!-- ROW 6 -->
+  <div class="row">
+
+    <div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Kaja" data-price="150">
+    <img src="images\khaja.webp" class="card-img-top" alt="Kaja">
+    <div class="card-body text-center">
+      <h5 class="card-title">Kaja</h5>
+      <p class="card-text">Price: 150 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Mysore Pak" data-price="160">
+    <img src="images\mysore-pak.jpg" class="card-img-top" alt="Mysore Pak">
+    <div class="card-body text-center">
+      <h5 class="card-title">Mysore Pak</h5>
+      <p class="card-text">Price: 160 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Ariselu" data-price="170">
+    <img src="images\ariselu.jpg" class="card-img-top" alt="Ariselu">
+    <div class="card-body text-center">
+      <h5 class="card-title">Ariselu</h5>
+      <p class="card-text">Price: 170 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3 mb-4">
+  <div class="card food-card" data-name="Gulab Jamoon" data-price="180">
+    <img src="images\gulab-jamuns.webp" class="card-img-top" alt="Gulab Jamoon">
+    <div class="card-body text-center">
+      <h5 class="card-title">Gulab Jamoon</h5>
+      <p class="card-text">Price: 180 Rs / 1 person</p>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn btn-outline-danger btn-sm minus">−</button>
+        <span class="qty">0</span>
+        <button class="btn btn-outline-success btn-sm plus">+</button>
+      </div>
+      <p class="mt-2"><b>Total: ₹<span class="total">0</span></b></p>
+      <button class="btn btn-success add-to-cart mt-2">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+</div><br><br>
+<a id="About"></a>
+
+<table width="100%" id="flip">
+    <tr>
+        <!-- Left Side Image -->
+        <td width="50%">
+    <div class="flip-box" onclick="this.classList.toggle('flipped')">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <img src="images\serve.jpg"
+                     width="100%" height="300px">
+            </div>
+            <div class="flip-box-back">
+                <img src="images\catering1.2.avif"
+                     width="100%" height="300px">
+            </div>
+        </div>
+    </div>
+</td>
+
+
+        <!-- Right Side Text -->
+        <td width="50%" style="padding-left:20px;">
+            <h2 id="about-page">About Our SMR Catering Services</h2>
+            <p>
+                We provide delicious and hygienic catering services for all types of events.
+                Our team ensures the best quality food and excellent service to make your
+                celebrations memorable.
+            </p>
+
+            <h3>We Serve For:</h3>
+            <ul>
+                <li>Wedding Events</li>
+                <li>Birthday Parties</li>
+                <li>Corporate Functions</li>
+                <li>Housewarming Ceremonies</li>
+            </ul>
+        </td>
+    </tr>
+</table><br><br>
+<!-- Contact Section -->
+<h2 id="Contact">☎️ Contact Us</h2>
+
+
+<table width="90%" id="contact-us">
+  <b><p id="Contact-m">We’d love to hear from you! Feel free to reach out regarding orders, offers, or any support.</p></b><br><br>
+    <tr>
+        <!-- Left Side (Address, Phone, Email, Timings) -->
+        <td width="40%" valign="top">
+
+    <div class="left-contact-box">
+
+        <h2 class="left-title">Contact Information</h2>
+
+        <div class="left-section">
+            <h3>📍 Address</h3>
+            <p>
+                SMR Catering Services<br>
+                #3/239 vadde Street, Kasapuram<br>
+                Guntakal, Andhra Pradesh – 515803
+            </p>
+        </div>
+
+        <div class="left-section">
+            <h3>📞 Phone</h3>
+            <p>
+                <a href="tel:+919704478306">+91-97044 78306</a><br>
+                <a href="tel:+919063068186">+91-90630 68186</a>
+            </p>
+        </div>
+
+        <div class="left-section">
+            <h3>📧 Email</h3>
+            <p>
+                <a href="mailto:sameershake443@gmail.com">sameershake443@gmail.com</a><br>
+                <a href="mailto:smrcatering@gmail.com">smrcatering@gmail.com</a>
+            </p>
+        </div>
+
+        <div class="left-section">
+            <h3>⏰ Service Timings</h3>
+            <p>
+                Mon – Sat: 8:00 AM – 9:00 PM<br>
+                Sun: 9:00 AM – 6:00 PM
+            </p>
+        </div>
+
+    </div>
+
+</td>
+
+
+        <!-- Right Side (Contact Form) -->
+        <td width="60%" valign="top">
+
+    <div class="contact-box">
+
+        <h2 class="contact-title">Send Us a Message</h2>
+
+        <form class="contact-form" id="contactForm">
+
+    <label>Your Name:</label>
+    <input type="text" id="contactName" placeholder="Enter your name" required>
+
+    <label>Your Email:</label>
+    <input type="email" id="contactEmail" placeholder="Enter your email" required>
+
+    <label>Message:</label>
+    <textarea id="contactMessage" placeholder="Enter your message" rows="5" required></textarea>
+
+    <button type="submit" class="contact-btn">Send Message</button>
+
+</form>
+
+
+    </div>
+
+</td>
+
+    </tr>
+</table>
+<div class="accordion custom-accordion" id="accordionExample">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+        What services does SMR Food Caterings provide?
+      </button>
+    </h2>
+    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        SMR Caterings provides pure veg and non-veg meals, Andhra-style dishes, party orders,
+        tiffins, lunch deliveries, bulk orders, event catering, and home delivery services.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+        Do you deliver food to homes or offices?
+      </button>
+    </h2>
+    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Yes! We deliver fresh and hot meals directly to homes, offices, hostels, and events within
+        Guntakal and nearby areas. Minimum order value may apply for certain locations.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+        What are your service timings?
+      </button>
+    </h2>
+    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        We are open from <b>Mon–Sat: 8 AM – 9 PM</b> and <b>Sunday: 9 AM – 6 PM</b>.
+        For party/bulk orders we accept bookings anytime.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- my catering service Info -->
+        <div class="footer-box">
+            <h3>SMR Catering Services</h3>
+            <p>Delicious & hygienic catering for weddings, functions, parties, and all events.</p>
+
+            <h4>📍 Address</h4>
+            <p>
+                #3/239 Vadde Street, Kasapuram,<br>
+                Guntakal, Andhra Pradesh – 515803
+            </p>
+
+            <a href="https://maps.app.goo.gl/Xfw6wEvsJk1D8JeZA" target="_blank" class="footer-btn">📌 View Location</a>
+        </div>
+
+       
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vegitems">Items</a></li>
+                <li><a href="#veg">Veg</a></li>
+                <li><a href="#nonveg">Non-Veg</a></li>
+                <li><a href="#sweets">Sweets</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+
+      
+        <div class="footer-box">
+            <h3>Our YouTube Video</h3>
+            <video id="myVideo" src="videoplayback.mp4" controls></video>
+
+
+
+
+        </div>
+
+        
+     <div class="footer-box">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+        
+        <a href="https://www.facebook.com/profile.php?id=100085908382142" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        
+        <a href="https://instagram.com/_shameer_sam" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://twitter.com/_shameer_sam" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="https://youtube.com/shorts/hDmLVczd_TU" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+    </div><br>
+
+    
+    <div class="working-hours">
+        <h4>Working Hours</h4>
+        <p>
+            Mon – Sat: 8:00 AM – 9:00 PM<br>
+            Sun: 9:00 AM – 6:00 PM
+        </p>
+    </div>
+</div>
+
+
+    <div class="footer-bottom">
+        © 2025 SMR Catering Services | Designed by Shameer
+    </div>
+</footer>
+
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🛒 Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+  <!-- Order Summary -->
+  <h5>🧾 Order Summary</h5>
+  <ul class="list-group mb-3" id="cartItems"></ul>
+
+  <!-- Delivery Details -->
+  <h5 class="mt-3">🚚 Delivery Details</h5>
+  <input type="text" id="custName" class="form-control mb-2" placeholder="Your Name">
+  <input type="tel" id="custMobile" class="form-control mb-2" placeholder="Mobile Number">
+  <textarea id="custAddress" class="form-control mb-3" placeholder="Delivery Address"></textarea>
+
+  <!-- Delivery Date -->
+<h5 class="mt-3">📅 Delivery Date</h5>
+<input type="date" id="deliveryDate" class="form-control mb-3">
+
+<!-- Delivery Time -->
+<h5>⏰ Delivery Time</h5>
+<select id="deliveryTime" class="form-select mb-3">
+  <option value="">Select Time Slot</option>
+  <option value="9AM-12PM">Morning (9 AM - 12 PM)</option>
+  <option value="12PM-3PM">Afternoon (12 PM - 3 PM)</option>
+  <option value="6PM-9PM">Evening (6 PM - 9 PM)</option>
+</select>
+
+<!-- Meal Type -->
+<h5>🍽️ Meal Type</h5>
+<select id="mealType" class="form-select mb-3">
+  <option value="">Select Meal</option>
+  <option value="Breakfast">Breakfast</option>
+  <option value="Lunch">Lunch</option>
+  <option value="Dinner">Dinner</option>
+</select>
+
+
+  <!-- Payment Method -->
+  <h5>💳 Payment Method</h5>
+  <select id="paymentMode" class="form-select">
+    <option value="">Select Payment Method</option>
+    <option value="COD">Cash on Delivery</option>
+    <option value="UPI">UPI</option>
+  </select>
+
+</div>
+
+
+      <div class="modal-footer d-flex justify-content-between">
+        <h5>Total: ₹<span id="cartTotal">0</span></h5>
+        <button class="btn btn-success" id="checkoutBtn">Checkout</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js" defer></script>
+<script src="contact.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="register-container">
+    <form onsubmit="return validateRegister()" method="post" class="register-card">
+        <h2>Register</h2>
+        <table>
+            <tr>
+                <td><label>Full Name:</label></td>
+                <td><input type="text" id="fullname" placeholder="Enter your full name" required></td>
+            </tr>
+            <tr>
+                <td><label>Mobile Number:</label></td>
+                <td><input type="tel" id="mobile" placeholder="Enter your mobile number" required></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" id="email" placeholder="Enter your email" required></td>
+            </tr>
+            <tr>
+                <td><label>Create Password:</label></td>
+                <td><input type="password" id="password" placeholder="Enter password" required></td>
+            </tr>
+            <tr>
+                <td><label>Retype Password:</label></td>
+                <td><input type="password" id="repassword" placeholder="Retype password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register" class="btn">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" class="login-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script src="register.js"></script>
+
+</body>
+</html>

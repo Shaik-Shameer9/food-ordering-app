@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #8e2de2);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.register-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px 65px 45px;
+    border-radius: 25px;
+    width: 500px;
+    box-shadow: 0 25px 55px rgba(0,0,0,0.35);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+
+.register-card::before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff758c, #8e2de2);
+    border-radius: 50%;
+}
+
+
+.register-card::after {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 48px 0 10px #ffffff;
+}
+
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+}
+
+table {
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 6px;
+    font-size: 15px;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-bottom-color: #8e2de2;
+}
+
+.btn {
+    margin-top: 25px;
+    width: 180px;
+    padding: 12px;
+    background: linear-gradient(to right, #ff758c, #8e2de2);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(142, 45, 226, 0.5);
+}
+
+.login-link {
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.login-link a {
+    color: #8e2de2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

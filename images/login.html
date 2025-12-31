@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <form id="loginForm" class="login-card">
+        <h2>Login</h2>
+
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </td>
+            </tr>
+
+            <!-- ✅ REAL-TIME STYLE CAPTCHA -->
+            <tr>
+                <td>Captcha:</td>
+                <td>
+                    <div class="captcha-box">
+                        <span id="num1"></span>
+                        <span class="operator">+</span>
+                        <span id="num2"></span>
+                        <span class="operator">=</span>
+
+                        <input type="number" id="captchaInput" placeholder="?" required>
+
+                        <button type="button" class="refresh-btn" onclick="generateCaptcha()">🔄</button>
+                    </div>
+                    <small id="captchaError" class="error-text"></small>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Login" class="btn">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    Don’t have an account? <a href="register.html">Register</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
